@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Informasi Pendaftar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="header">
+    <h1>Detail Informasi Pendaftar</h1>
+    <p>Tugas Individu 3 - Pengembangan Aplikasi Web</p>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <h2>Data Pendaftar <span class="badge">Dummy</span></h2>
+
+      <p class="note">
+        Halaman ini hanya berisi <strong>data dummy</strong>. Data dari form
+        tidak ditangkap, halaman ini hanya menunjukkan rancangan query string
+        yang dikirim oleh form pendaftaran.
+      </p>
+
+      <!-- Rancangan query string hasil submit form (method GET) -->
+      <p><strong>Rancangan query string:</strong></p>
+      <div class="query-box">
+        detail.html?nama=Duwi+Putri+Wahyuni&amp;nim=124140049&amp;email=duwi.124140049%40student.itera.ac.id&amp;telepon=083890227760&amp;tgl_lahir=2006-11-10&amp;jk=Perempuan&amp;prodi=Teknik+Informatika&amp;minat=Motivasi&amp;minat=CSS&amp;alasan=Karena+ingin+belajar
+      </div>
+
+      <table>
+        <caption>Informasi Pendaftar</caption>
+        <thead>
+          <tr>
+            <th colspan="2">Data Pendaftar (Dummy)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Nama Lengkap</th>
+            <td>Duwi Putri Wahyuni</td>
+          </tr>
+          <tr>
+            <th>NIM</th>
+            <td>124140049</td>
+          </tr>
+          <tr>
+            <th>Email</th>
+            <td>duwi.124140049@student.itera.ac.id</td>
+          </tr>
+          <tr>
+            <th>Nomor Telepon</th>
+            <td>083890227760</td>
+          </tr>
+          <tr>
+            <th>Tanggal Lahir</th>
+            <td>10 November 2006</td>
+          </tr>
+          <tr>
+            <th>Jenis Kelamin</th>
+            <td>Perempuan</td>
+          </tr>
+          <tr>
+            <th>Program Studi</th>
+            <td>Teknik Informatika</td>
+          </tr>
+          <tr>
+            <th>Minat</th>
+            <td>Motivasi, CSS</td>
+          </tr>
+          <tr>
+            <th>Alasan Mengikuti Workshop</th>
+            <td>Karena ingin belajar</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Tabel pemetaan name input -> parameter query string -->
+      <table>
+        <caption>Parameter Query String</caption>
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Berasal dari input</th>
+            <th>Contoh nilai</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>nama</td><td>text</td><td>Duwi+Putri+Wahyuni</td></tr>
+          <tr><td>nim</td><td>text (pattern)</td><td>124140049</td></tr>
+          <tr><td>email</td><td>email</td><td>duwi.124140049%40student.itera.ac.id</td></tr>
+          <tr><td>telepon</td><td>tel</td><td>083890227760</td></tr>
+          <tr><td>tgl_lahir</td><td>date</td><td>2006-11-10</td></tr>
+          <tr><td>jk</td><td>radio</td><td>Perempuan</td></tr>
+          <tr><td>prodi</td><td>select + optgroup</td><td>Teknik+Informatika</td></tr>
+          <tr><td>minat</td><td>checkbox (lebih dari satu)</td><td>Motivasi &amp; CSS</td></tr>
+          <tr><td>alasan</td><td>textarea</td><td>Karena+ingin+belajar</td></tr>
+        </tbody>
+      </table>
+
+      <div class="button-row">
+        <a class="btn" href="index.html">&laquo; Kembali ke Pendaftaran</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer">Informatika ITERA &copy; 2025 - Tugas Individu 3 Pemweb</div>
+
+</body>
+</html>

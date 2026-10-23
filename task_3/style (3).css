@@ -1,0 +1,310 @@
+/* ==========================================================
+   Tugas Individu 3 - Pengembangan Aplikasi Web
+   Stylesheet untuk halaman pendaftaran & detail pendaftar
+   Selector yang dipakai: element, class, id, pseudo-class,
+   attribute, dan descendant selector
+   ========================================================== */
+
+/* ---------- 1. Element selector: reset & dasar ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f0f7ff;
+  color: #222;
+  line-height: 1.5;
+}
+
+h1, h2 {
+  margin: 0 0 8px;
+  color: #155a9c;
+}
+
+p {
+  margin: 0 0 12px;
+}
+
+a {
+  color: #155a9c;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- 2. ID selector: header & footer ---------- */
+#header {
+  background-color: #155a9c;
+  color: #fff;
+  padding: 24px 16px;
+  text-align: center;
+  border-bottom: 6px solid #ff914d;
+}
+
+#header h1 {
+  color: #fff;
+  font-size: 1.8em;
+}
+
+#header p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+#footer {
+  background-color: #155a9c;
+  color: #fff;
+  text-align: center;
+  padding: 14px;
+  font-size: 0.85em;
+  margin-top: 32px;
+}
+
+/* ---------- 3. Class selector: layout (Flexbox & Grid) ---------- */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px 16px;
+}
+
+/* Box / card */
+.card {
+  background-color: #fff;
+  width: 100%;
+  max-width: 720px;
+  padding: 28px;
+  border-radius: 12px;
+  border: 1px solid #d6e4f5;
+  border-top: 5px solid #ff914d;
+  box-shadow: 0 4px 14px rgba(21, 90, 156, 0.12);
+}
+
+.card h2 {
+  border-bottom: 2px solid #ff914d;
+  padding-bottom: 8px;
+  margin-bottom: 18px;
+}
+
+.note {
+  background-color: #fff8e7;
+  border-left: 4px solid #dca806;
+  padding: 10px 14px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  margin-bottom: 18px;
+}
+
+/* ---------- 4. Desain FORM ---------- */
+fieldset {
+  border: 1px solid #b8cfe8;
+  border-radius: 8px;
+  padding: 14px 18px 8px;
+  margin: 0 0 18px;
+  background-color: #f9fcff;
+}
+
+legend {
+  padding: 0 8px;
+  font-weight: bold;
+  color: #155a9c;
+}
+
+/* Grid dua kolom untuk baris form */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+
+.form-group.full {
+  grid-column: 1 / 3;
+}
+
+.form-label {
+  font-weight: bold;
+  font-size: 0.9em;
+  margin-bottom: 4px;
+}
+
+/* Attribute selector: semua input teks, email, date, select, textarea */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 9px 10px;
+  border: 1px solid #9db9d8;
+  border-radius: 6px;
+  font-size: 0.95em;
+  font-family: inherit;
+  background-color: #fff;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #ff914d;
+  box-shadow: 0 0 0 3px rgba(255, 145, 77, 0.25);
+}
+
+/* Radio & checkbox */
+.option-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+}
+
+.option-row label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95em;
+  cursor: pointer;
+}
+
+/* Tombol */
+.button-row {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+input[type="submit"],
+input[type="reset"],
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95em;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+input[type="submit"],
+.btn {
+  background-color: #155a9c;
+  color: #fff;
+}
+
+input[type="submit"]:hover,
+.btn:hover {
+  background-color: #0f4574;
+  text-decoration: none;
+}
+
+input[type="reset"] {
+  background-color: #e3e8ee;
+  color: #333;
+}
+
+input[type="reset"]:hover {
+  background-color: #d2d9e1;
+}
+
+/* ---------- 5. Desain TABEL ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95em;
+  border-top: 4px solid #dca806;
+  margin-bottom: 18px;
+}
+
+caption {
+  text-align: left;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 8px 0;
+  color: #155a9c;
+}
+
+th,
+td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #ffe7b2;
+}
+
+/* Kolom label (th di dalam tbody) */
+tbody th {
+  width: 34%;
+  background-color: #fff8e7;
+  color: #5b4300;
+}
+
+thead th {
+  background-color: #dca806;
+  color: #fff;
+}
+
+/* Zebra stripes & hover effect (sesuai materi) */
+tbody tr:nth-child(even) td {
+  background-color: #fffbf2;
+}
+
+tbody tr:hover td {
+  background-color: #ffe7b2;
+  transition: background-color 0.3s;
+}
+
+/* ---------- 6. Utility ---------- */
+.query-box {
+  background-color: #155a9c;
+  color: #fff;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.85em;
+  padding: 12px 14px;
+  border-radius: 6px;
+  word-break: break-all;
+  margin-bottom: 18px;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #ff914d;
+  color: #fff;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+/* ---------- 7. Responsive ---------- */
+@media (max-width: 600px) {
+  .card {
+    padding: 18px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full {
+    grid-column: 1;
+  }
+
+  .button-row {
+    flex-direction: column;
+  }
+}
